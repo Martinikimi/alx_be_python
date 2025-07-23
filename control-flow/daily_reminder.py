@@ -6,7 +6,7 @@ time_bound = input("Is it time-bound? (yes/no): ")
 # Start creating the reminder message
 reminder = f"'{task}' is a {priority} priority task"
 
-# Use Match Case to change the message based on priority
+# Use Match Case to react differently based on the priority
 match priority:
     case "high":
         reminder = f"Reminder: {reminder}"
@@ -17,9 +17,12 @@ match priority:
     case _:
         reminder = f"Note: '{task}' priority is not recognized."
 
-# Add extra message if the task is time-bound and is high or medium priority
+# Add extra message if the task is time-bound and high or medium priority
 if time_bound == "yes" and priority in ["high", "medium"]:
     reminder += " that requires immediate attention today!"
 
-# Print the final reminder
-print(reminder)
+# ✅ Simple loop (prints the reminder 3 times like a real reminder)
+count = 1
+while count <= 3:
+    print(reminder)
+    count += 1

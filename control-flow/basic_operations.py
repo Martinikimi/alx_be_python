@@ -1,16 +1,15 @@
-# basic_operations.py
+# This program does basic arithmetic calculations
 
-number1 = 10
-number2 = 5
+#Step 1 Define the two variables
+Number1 = 10
+Number2 = 5
 
-# Perform basic operations
-addition = number1 + number2
-subtraction = number1 - number2
-multiplication = number1 * number2
+#Step 2 Perform the calculations
+Addition = Number1 + Number2
+Substraction = Number1 - Number2
+Multiplication = Number1 * Number2
 
-# Print the results in the required format
-print(f"Addition of {number1} and {number2} is {addition}")
-print(f"Subtraction of {number1} and {number2} is {subtraction}")
-print(f"Multiplication of {number1} and {number2} is {multiplication}")
-
-
+#Print out the results
+print(f"Addition of {Number1} and {Number2} is {Addition}")
+print(f"Substraction of {Number1} and {Number2} is {Substraction}")
+print(f"Multiplication of {Number1} and {Number2} is {Multiplication}")

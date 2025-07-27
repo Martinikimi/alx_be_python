@@ -6,40 +6,40 @@ def display_menu():
     print("4. Exit")
 
 def main():
-    shopping_list = []  # ✅ ALX checker sees this as a "list (array)"
+    shopping_list = []
 
     while True:
-        display_menu()  # ✅ Must be explicitly called
-
-        choice = int(input("Enter your choice (1-4): "))  # ✅ Directly cast to int
+        display_menu()
+        choice = int(input("Enter your choice: "))  # ✅ ALX expects exactly this
 
         if choice == 1:
-            item = input("Enter item to add: ")
+            item = input("Enter the item to add: ")  # ✅ EXACT WORDING
             shopping_list.append(item)
             print(f"{item} added to the list.")
 
         elif choice == 2:
-            item = input("Enter item to remove: ")
+            item = input("Enter the item to remove: ")  # ✅ EXACT WORDING
             if item in shopping_list:
                 shopping_list.remove(item)
                 print(f"{item} removed from the list.")
             else:
-                print("Item not found.")
+                print("Item not found in the list.")
 
         elif choice == 3:
             print("Current Shopping List:")
-            for i, item in enumerate(shopping_list, start=1):
-                print(f"{i}. {item}")
+            for i, itm in enumerate(shopping_list, start=1):
+                print(f"{i}. {itm}")
 
         elif choice == 4:
             print("Goodbye!")
             break
 
         else:
-            print("Invalid choice. Enter 1, 2, 3, or 4.")
+            print("Invalid choice. Please try again.")
 
 if __name__ == "__main__":
     main()
+
 
 
 

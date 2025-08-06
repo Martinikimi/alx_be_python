@@ -1,27 +1,12 @@
-import sys
-
 def safe_divide(numerator, denominator):
     try:
-        result = numerator / denominator
-        return result
+        num = float(numerator)
+        den = float(denominator)
+        result = num / den
+        return f"The result of the division is {result}"
     except ZeroDivisionError:
-        return f"Error: Cannot divide by zero."
-
-def main():
-    if len(sys.argv) != 3:
-        print("Usage: python main.py <numerator> <denominator>")
-        return
-    
-    try:
-        numerator = float(sys.argv[1])
-        denominator = float(sys.argv[2])
+        return "Error: Cannot divide by zero."
     except ValueError:
-        return f"Error: Please enter numeric values only."
-        return
+        return "Error: Please enter numeric values only."
 
-    result = safe_divide(numerator, denominator)
-    print("The result of the division is", result)
-
-if __name__ == "__main__":
-    main()
 

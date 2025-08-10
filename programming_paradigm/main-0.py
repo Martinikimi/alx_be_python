@@ -9,7 +9,7 @@ def main():
 
 >>>>>>> d18f9db70ec9eacd856cd0e94df605db7d0dbce4
     if len(sys.argv) < 2:
-        print("Usage: python main-0.py <command>:<amount>")
+        print("Usage: python main.py <command>:<amount>")
         print("Commands: deposit, withdraw, display")
         sys.exit(1)
 
